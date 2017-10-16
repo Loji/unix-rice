@@ -4,7 +4,9 @@ URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
-URxvt*font: -*-terminesspowerline-medium-*-*-*-14-*-*-*-*-*-iso10646-1
+!URxvt*font: -*-terminesspowerline-medium-*-*-*-14-*-*-*-*-*-iso10646-1
+
+URxvt*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-1
 URxvt.color12: rgb:5c/5c/ff
 
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
@@ -64,11 +66,8 @@ rofi.lines:                          25
 rofi.columns:                        1
 rofi.font:			                     Terminus 11
 rofi.color-enabled:                  true
-rofi.color-window: argb:ff263238, argb:ff4db6ac, #4db6ac
-rofi.color-normal: argb:0000000, #888888, argb:05ffffff, #4db6ac, #11403b
-rofi.color-active: argb:0000000, #ad9365, argb:5ffffff, #ad9365, #333333
-rofi.color-urgent: argb:0000000, #c78165, argb:5ffffff, #c78165, #333333
-
+rofi.color-window: argb:ff19314F, argb:ff23599F, #D82D13
+rofi.color-normal: argb:0000000, #0FCFBE, argb:00ffffff, #D82D13, #EABC2E
 
 rofi.bw:                             0
 rofi.location:                       0

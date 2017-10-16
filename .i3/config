@@ -126,11 +126,11 @@ font -*-terminesspowerline-medium-*-*-*-12-*-*-*-*-*-iso10646-1
 
 ## Colors
 ##   class                border       background   text
-client.focused            #263238      #263238      #d3dae3 #4db6ac
-client.focused_inactive   #182125      #182125      #6f767e #4db6ac
-client.unfocused          #182125      #182125      #6f767e #4db6ac
-client.urgent             #f0da4c      #f0da4c      #D1CCDC #4db6ac
-client.background         #4db6ac
+client.focused            #D82D13      #D82D13      #EABC2E #4db6ac
+client.focused_inactive   #19314F      #19314F      #0FCFBE #4db6ac
+client.unfocused          #19314F      #19314F      #0FCFBE #4db6ac
+client.urgent             #EABC2E      #EABC2E      #D82D13 #4db6ac
+client.background         #19314F
 
 # disabling tile border when it's the only one visible
 for_window [class="^.*"] border pixel 1
