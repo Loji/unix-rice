@@ -1,6 +1,8 @@
 # Ignore everything except very few save files I gitta keep 
 /*
 !.gitignore
+!.Xresources
+!.zshrc
 !.i3/
 !.config
 .config/*
