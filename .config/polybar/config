@@ -1,0 +1,245 @@
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = false
+
+[colors]
+background 	= #263238
+border_color = #1b2428
+foreground 	= #d3dae3
+color_1	= #4db6ac
+color_2	= #f0da4c
+color_3	= #4db6ac
+color_4 = #1b2428
+
+
+[bar/laptop]
+bottom = false
+width = 100%
+height = 18
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground =  ${colors.foreground}
+
+line-size = 1
+padding-left = 0
+padding-right = 0
+
+border-bottom-size = 1
+border-bottom-color = ${colors.border_color}
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = xos4terminus:size=9;1
+font-1 = Terminus:fontformat=truetype:size=9;1
+font-2 = FontAwesome:fontformat=truetype:size=9;1
+
+separator = |
+
+modules-left = i3 xwindow
+modules-center =
+modules-right = wireless-network vpn battery temperature date
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+tray-position = right
+tray-padding = 2
+tray-offset-y = 0%
+tray-offset-x = 0%
+tray-maxsize = 18
+tray-detached = false
+tray-transparent = false
+tray-color = ${colors.background}
+
+wm-restack = i3
+override-redirect = false
+
+[module/i3]
+type = internal/i3
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.foreground}
+label-focused-font = 1
+label-unfocused-font = 1
+
+label-mode = %mode%
+label-mode-padding = 1
+label-mode-background = ${colors.color_1}
+
+label-focused = %index%
+label-focused-foreground = ${colors.color_4}
+label-focused-background = ${colors.color_3}
+label-focused-padding = 1
+
+label-unfocused = %index%
+label-unfocused-padding = 1
+
+label-visible = %index%
+label-visible-underline = ${colors.foreground}
+label-visible-padding = 1
+
+label-urgent = %index%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.background}
+label-urgent-padding = 1
+
+[module/xwindow]
+type = internal/xwindow
+label-maxlen = 85
+
+[module/date]
+type = internal/date
+interval = 5
+
+format = <label>
+format-prefix-foreground = ${colors.foreground}
+
+label = %date%, %time%
+
+date = "%a %B %d"
+date-alt = "%d-%m-%Y"
+
+time-alt = "%I:%M %p"
+time = "%H:%M"
+
+[module/volume]
+type = internal/volume
+
+format-muted-background = ${colors.background}
+format-volume-background = ${colors.background}
+format-volume = <ramp-volume> <bar-volume>
+label-muted = Muted
+
+bar-volume-width = 15
+bar-volume-foreground = ${colors.foreground}
+bar-volume-gradient = false
+bar-volume-indicator= ─
+bar-volume-indicator-font = 1
+bar-volume-indicator-foreground = ${colors.color_1}
+bar-volume-fill = ─
+bar-volume-fill-font = 1
+bar-volume-empty = ─
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = ${colors.color_4}
+
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+ramp-volume-foreground = ${colors.color_1}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 65
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature%
+
+label-warn = %temperature%
+label-warn-foreground = ${colors.color_3}
+
+ramp-0 = 
+ramp-foreground = ${colors.color_1}
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = ⚡ Power
+label-open-background = ${colors.background}
+label-open-foreground = ${colors.foreground}
+label-close = ⚡
+label-close-background = ${colors.background}
+label-close-foreground = ${colors.foreground}
+label-separator = " "
+label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = Reboot
+menu-0-0-exec = shutdown -r now
+menu-0-1 = Power Off
+menu-0-1-exec = shutdown now
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[module/battery]
+type = internal/battery
+full-at = 100
+
+battery = BAT0
+adapter = AC
+poll-interval = 5
+
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full =  <label-full>
+
+format-charging-foreground = ${colors.color_1}
+format-discharging-foreground = ${colors.color_1}
+format-full-foreground = ${colors.color_1}
+
+label-charging = %percentage%% - %time%
+label-discharging = %percentage%% - %time%
+label-full = Fully charged
+
+label-charging-foreground = ${colors.foreground}
+label-discharging-foreground = ${colors.foreground}
+label-full-foreground = ${colors.foreground}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+
+interval = 5.0
+accumulate-stats = true
+format-connected =  <label-connected>
+format-connected-foreground = ${colors.color_1}
+format-disconnected = <label-disconnected>
+
+label-connected = %essid%  %local_ip%
+label-connected-foreground = ${colors.foreground}
+
+label-disconnected = (None)
+label-disconnected-foreground = ${colors.foreground}
+
+[module/vpn]
+type = internal/network
+interface = tun0
+
+interval = 5.0
+accumulate-stats = true
+format-connected =  <label-connected>
+format-connected-foreground = ${colors.color_1}
+format-disconnected =  <label-disconnected>
+format-disconnected-foreground = ${colors.color_1}
+
+label-connected = Connected
+label-connected-foreground = ${colors.foreground}
+
+label-disconnected = None
+label-disconnected-foreground = ${colors.foreground}
