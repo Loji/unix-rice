@@ -23,13 +23,13 @@ URxvt*visualBell:  true
 urxvt*dynamicColors: on
 
 ! special
-*.foreground:   #a2a2a2
-*.background:   #282828
-*.cursorColor:  #a2a2a2
+*.foreground:   #0fcfbe
+*.background:   #19314f
+*.cursorColor:  #0fcfbe
 
 ! black
-*.color0:       #555555
-*.color8:       #888888
+*.color0:       #5c5c5c
+*.color8:       #a8a8a8
 
 ! red
 *.color1:       #9c3528
@@ -52,12 +52,12 @@ urxvt*dynamicColors: on
 *.color13:      #9e5e83
 
 ! cyan
-*.color6:       #288e9c
-*.color14:      #37c3d6
+*.color6:       #418c8e
+*.color14:      #42a9ac
 
 ! white
-*.color7:       #a2a2a2
-*.color15:      #f9f9f9
+*.color7:       #faff86
+*.color15:      #f3f3f3
 
 !rofi
 rofi.modi:                           window,run,ssh
