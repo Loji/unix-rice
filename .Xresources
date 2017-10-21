@@ -67,7 +67,7 @@ rofi.columns:                        1
 rofi.font:			                     Terminus 11
 rofi.color-enabled:                  true
 rofi.color-window: argb:ff19314F, argb:ff23599F, #D82D13
-rofi.color-normal: argb:0000000, #0FCFBE, argb:00ffffff, #D82D13, #EABC2E
+rofi.color-normal: argb:00000000, #0FCFBE, argb:00ffffff, #D82D13, #EABC2E
 
 rofi.bw:                             0
 rofi.location:                       0
