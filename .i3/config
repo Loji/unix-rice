@@ -144,11 +144,11 @@ font -*-terminesspowerline-medium-*-*-*-12-*-*-*-*-*-iso10646-1
 
 ## Colors
 ##   class                border       background   text
-client.focused            #D82D13      #D82D13      #EABC2E #4db6ac
-client.focused_inactive   #19314F      #19314F      #0FCFBE #4db6ac
-client.unfocused          #19314F      #19314F      #0FCFBE #4db6ac
-client.urgent             #EABC2E      #EABC2E      #D82D13 #4db6ac
-client.background         #19314F
+client.focused            #00C8B3      #00C8B3      #54414A #54414A
+# client.focused_inactive   #19314F      #19314F      #0FCFBE #4db6ac
+client.unfocused          #54414A      #54414A      #BCA5AF #BCA5AF
+client.urgent             #54414A      #54414A      #00C8B3 #00C8B3p
+client.background         #54414A
 
 # disabling tile border when it's the only one visible
 for_window [class="^.*"] border pixel 1
@@ -172,11 +172,12 @@ bindsym $mod+0xff61 exec gnome-screenshot -w
 exec xrdb ~/.Xresources
 exec xcompmgr -C -l -O -D1
 exec icon
+exec volumeicon
 exec nm-applet
 exec blueman-applet
 exec xmodmap ~/.Xmodmap
 
-exec --no-startup-id feh --bg-fill ~/.i3/wallpaper/blade-runner-2049-e.jpg
+exec --no-startup-id feh --bg-fill ~/.i3/4.jpg
 
 exec_always setxkbmap -option ctrl:nocaps
 exec_always setxkbmap pl

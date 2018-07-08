@@ -23,41 +23,41 @@ URxvt*visualBell:  true
 urxvt*dynamicColors: on
 
 ! special
-*.foreground:   #0fcfbe
-*.background:   #19314f
-*.cursorColor:  #0fcfbe
+*.foreground:   #ffffff
+*.background:   #463b40
+*.cursorColor:  #ffffff
 
 ! black
-*.color0:       #5c5c5c
-*.color8:       #a8a8a8
+*.color0:       #000000
+*.color8:       #4d4d4d
 
 ! red
-*.color1:       #9c3528
-*.color9:       #d64937
+*.color1:       #cc0403
+*.color9:       #3e0605
 
 ! green
-*.color2:       #61bc3b
-*.color10:      #86df5d
+*.color2:       #19cb00
+*.color10:      #23fd00
 
 ! yellow
-*.color3:       #f3b43a
-*.color11:      #fdd75a
+*.color3:       #cecb00
+*.color11:      #fffd00
 
 ! blue
-*.color4:       #0d68a8
-*.color12:      #0f75bd
+*.color4:       #001cd1
+*.color12:      #0026ff
 
 ! magenta
-*.color5:       #744560
-*.color13:      #9e5e83
+*.color5:       #cb1ed1
+*.color13:      #fd28ff
 
 ! cyan
-*.color6:       #418c8e
-*.color14:      #42a9ac
+*.color6:       #0dcdcd
+*.color14:      #14ffff
 
 ! white
-*.color7:       #faff86
-*.color15:      #f3f3f3
+*.color7:       #e5e5e5
+*.color15:      #ffffff
 
 !rofi
 rofi.modi:                           window,run,ssh
@@ -98,25 +98,3 @@ rofi.fullscreen:                     false
 rofi.scrollbar-width:                8
 ! Scrolling method. (0: Page, 1: Centered)
 rofi.scroll-method:                  0
-
-
-
-
-
-!Xterm
-xterm*termName: xterm-256color
-XTerm*locale: true
-XTerm*metaSendsEscape: true
-Xterm*saveLines: 4096
-
-!XTerm*font: -*-terminus-medium-*-*-*-13-*-*-*-*-*-iso10646-1
-!xterm*faceName:    xft:Terminus:size=13
-!XTerm*faceName:             xft:Droid Sans Monostyle=Regular:size=8
-!xterm*font: -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-iso8859-2
-XTerm*font: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-1
-xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-Xterm*utf8: 1
-xterm*bellIsUrgent: true
-!*xterm*selemtToClipBoard: true
-
-XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)

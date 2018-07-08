@@ -5,13 +5,13 @@ throttle-input-for = 30
 screenchange-reload = false
 
 [colors]
-background 	= #19314F
-border_color = #0FCFBE
-foreground 	= #0FCFBE
-color_1	= #0FCFBE
-color_2	= #EABC2E
-color_3	= #0FCFBE
-color_4 = #19314F
+background 	= #54414A
+border_color = #54414A
+foreground 	= #BCA5AF
+color_1	= #BCA5AF
+color_2	= #D2348F
+color_3	= #BCA5AF
+color_4 = #54414A
 
 
 [bar/laptop]

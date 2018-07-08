@@ -1,4 +1,4 @@
-# Ignore everything except very few save files I gitta keep 
+# Ignore everything except very few save files I gitta keep
 /*
 !.gitignore
 !.Xresources
@@ -7,4 +7,4 @@
 !.config
 .config/*
 !.config/polybar/
-
+!.config/rofi/
