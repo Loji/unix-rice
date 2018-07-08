@@ -54,13 +54,13 @@ plugins=(git)
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=~/.npm-global/bin:$PATH
+export PATH=~/.node:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR="vim"
 export TERMINAL="urxvt"
-export PATH="`ruby -rubygems -e 'puts Gem.user_dir'`/bin:$PATH"
+export PATH="`ruby -r rubygems -e 'puts Gem.user_dir'`/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.config/composer/vendor/bin" #composer packages
 
@@ -96,7 +96,7 @@ export npm_config_prefix=~/.node_modules
 alias HDMI-on='xrandr --output eDP1 --auto --primary --output HDMI1 --auto --right-of eDP1'
 alias HDMI-off='xrandr --output HDMI1 --off'
 alias HDMI-only='xrandr --output HDMI1 --auto --primary --output eDP1 --off'
-
+alias open='xdg-open'
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

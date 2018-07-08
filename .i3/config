@@ -65,6 +65,24 @@ bindsym $mod+a focus parent
 # focus the child container
 bindcode $mod+p focus child
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master 0% # mute sound
+
+# Sreen brightness controls
+bindsym XF86KbdBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86KbdBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
+# Touchpad controls
+bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # switch to workspace
 bindsym $mod+F1 workspace 1
 bindsym $mod+F2 workspace 2
