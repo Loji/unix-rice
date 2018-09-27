@@ -8,3 +8,8 @@
 .config/*
 !.config/polybar/
 !.config/rofi/
+!.local
+.local/*
+!.local/bin
+.local/bin/*
+!.local/bin/spotistat

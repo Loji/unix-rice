@@ -5,13 +5,13 @@ throttle-input-for = 30
 screenchange-reload = false
 
 [colors]
-background 	= #54414A
-border_color = #54414A
-foreground 	= #BCA5AF
-color_1	= #BCA5AF
-color_2	= #D2348F
-color_3	= #BCA5AF
-color_4 = #54414A
+background 	= #353945
+border_color = #353945
+foreground 	= #5294E2
+color_1	= #353945
+color_2	= #353945
+color_3	= #5294E2
+color_4 = #353945
 
 
 [bar/laptop]
@@ -44,7 +44,7 @@ separator = |
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = wireless-network vpn battery temperature date
+modules-right = spotify battery temperature date
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
@@ -243,3 +243,8 @@ label-connected-foreground = ${colors.foreground}
 
 label-disconnected = None
 label-disconnected-foreground = ${colors.foreground}
+
+[module/spotify]
+type = custom/script
+exec = spotistat
+tail = true

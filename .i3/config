@@ -74,9 +74,6 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master 0% # mute
 bindsym XF86KbdBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86KbdBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
-
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
@@ -144,11 +141,10 @@ font -*-terminesspowerline-medium-*-*-*-12-*-*-*-*-*-iso10646-1
 
 ## Colors
 ##   class                border       background   text
-client.focused            #00C8B3      #00C8B3      #54414A #54414A
-# client.focused_inactive   #19314F      #19314F      #0FCFBE #4db6ac
-client.unfocused          #54414A      #54414A      #BCA5AF #BCA5AF
-client.urgent             #54414A      #54414A      #00C8B3 #00C8B3p
-client.background         #54414A
+client.focused            #5294E2      #5294E2      #353945 #353945
+client.unfocused          #353945      #353945      #5294E2 #5294E2
+client.urgent             #FF6978      #FF6978      #5294E2 #5294E2
+client.background         #5294E2
 
 # disabling tile border when it's the only one visible
 for_window [class="^.*"] border pixel 1
@@ -166,8 +162,7 @@ floating_modifier Mod1
 bindsym $mod+r mode "resize"
 
 bindsym $mod+q exec ~/.i3/lock.sh
-bindsym 0xff61 exec gnome-screenshot
-bindsym $mod+0xff61 exec gnome-screenshot -w
+bindsym 0xff61 exec flameshot gui
 
 exec xrdb ~/.Xresources
 exec xcompmgr -C -l -O -D1
@@ -175,9 +170,11 @@ exec icon
 exec volumeicon
 exec nm-applet
 exec blueman-applet
+exec flameshot
+
 exec xmodmap ~/.Xmodmap
 
-exec --no-startup-id feh --bg-fill ~/.i3/4.jpg
+exec --no-startup-id feh --bg-fill ~/.i3/5.jpg
 
 exec_always setxkbmap -option ctrl:nocaps
 exec_always setxkbmap pl
