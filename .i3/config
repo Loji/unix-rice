@@ -183,4 +183,4 @@ exec_always xset m 0 3
 
 exec eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 exec export SSH_AUTH_SOCK
-exec polybar laptop
+exec ~/.polybar.sh
