@@ -3,21 +3,10 @@
 # requires imagemagick and scrot
 
 tmpbg="/tmp/lockscreen.png"
-#text="/tmp/locktext.png"
-dir="$HOME/.i3/lockscreens/"
-images=($(find ${dir} -name '*.png'))
-rnd=($(seq 0 $(expr ${#images[@]} - 1) | shuf))
-if [ $1 ]; then
-    pic=$dir'lock_'$1'.png'
-else
-    pic=${images[${rnd[i]}]}
-fi
+pic="$HOME/.i3/lockscreens/collibra.png"
 
 scrot "$tmpbg"
 convert "$tmpbg" -scale 10% -scale 1000% -fill black -colorize 25% "$tmpbg"
+convert "$tmpbg" "$pic" -gravity center -geometry +0+0 -composite -matte "$tmpbg"
 
-if [ -f "$pic" ]; then
-    convert "$tmpbg" "$pic" -gravity SouthEast -geometry +0+0 -composite -matte "$tmpbg"
-fi
-
-i3lock -u -n -e -i "$tmpbg" >> /dev/null
+i3lock -n -e -i "$tmpbg" >> /dev/null

@@ -164,6 +164,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+q exec ~/.i3/lock.sh
 bindsym 0xff61 exec flameshot gui
 
+exec ~/.screenlayout/main.sh
 exec xrdb ~/.Xresources
 exec xcompmgr -C -l -O -D1
 exec icon

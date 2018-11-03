@@ -3,7 +3,9 @@
 !.gitignore
 !.Xresources
 !.zshrc
+!.polybar.sh
 !.i3/
+!.screenlayout/
 !.config
 .config/*
 !.config/polybar/
